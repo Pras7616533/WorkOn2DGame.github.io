@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dots &amp; Boxes | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Strategy</p>
+                <h1>Dots &amp; Boxes</h1>
+                <p>Connect two dots to draw a line. Complete a square to claim it and take another turn.</p>
+
+                <div class="status-card">
+                    <div>
+                        <span>Current Turn</span>
+                        <strong data-turn>Red</strong>
+                    </div>
+                    <div>
+                        <span>Red</span>
+                        <strong data-score="red">0</strong>
+                    </div>
+                    <div>
+                        <span>Blue</span>
+                        <strong data-score="blue">0</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="reset">New Game</button>
+                    <button class="btn ghost" data-action="size">Toggle Size</button>
+                </div>
+            </section>
+
+            <section class="board-wrap">
+                <div class="board" data-board aria-label="Dots and Boxes board"></div>
+                <p class="hint">Tip: Completing a box gives you another move.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

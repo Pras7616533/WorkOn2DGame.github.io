@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Logic Puzzle</p>
+                <h1>Sudoku</h1>
+                <p>Fill every row, column, and 3×3 box with digits 1–9. Use the keypad to enter numbers and test your logic.</p>
+
+                <div class="info">
+                    <div>
+                        <span>Difficulty</span>
+                        <strong data-difficulty>Easy</strong>
+                    </div>
+                    <div>
+                        <span>Errors</span>
+                        <strong data-errors>0</strong>
+                    </div>
+                    <div>
+                        <span>Time</span>
+                        <strong data-timer>00:00</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="new">New Puzzle</button>
+                    <button class="btn ghost" data-action="reset">Reset</button>
+                    <button class="btn ghost" data-action="check">Check</button>
+                    <button class="btn danger" data-action="solve">Reveal</button>
+                </div>
+            </section>
+
+            <section class="board-wrap">
+                <div class="board" role="grid" aria-label="Sudoku board"></div>
+                <div class="keypad" aria-label="Number keypad">
+                    <button class="key" data-value="1">1</button>
+                    <button class="key" data-value="2">2</button>
+                    <button class="key" data-value="3">3</button>
+                    <button class="key" data-value="4">4</button>
+                    <button class="key" data-value="5">5</button>
+                    <button class="key" data-value="6">6</button>
+                    <button class="key" data-value="7">7</button>
+                    <button class="key" data-value="8">8</button>
+                    <button class="key" data-value="9">9</button>
+                    <button class="key erase" data-value="0">Erase</button>
+                </div>
+                <p class="hint">Click a cell, then use the keypad or your keyboard (1–9, Backspace).</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

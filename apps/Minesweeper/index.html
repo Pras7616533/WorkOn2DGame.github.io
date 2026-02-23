@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Logic Puzzle</p>
+                <h1>Minesweeper</h1>
+                <p>Reveal every safe tile without clicking a mine. Right‑click (or long‑press) to flag suspicious cells.</p>
+
+                <div class="status-card">
+                    <div>
+                        <span>Mines</span>
+                        <strong data-mines>0</strong>
+                    </div>
+                    <div>
+                        <span>Flags</span>
+                        <strong data-flags>0</strong>
+                    </div>
+                    <div>
+                        <span>Time</span>
+                        <strong data-time>00:00</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="new">New Game</button>
+                    <button class="btn ghost" data-action="difficulty">Toggle Difficulty</button>
+                </div>
+            </section>
+
+            <section class="board-wrap">
+                <div class="board" data-board aria-label="Minesweeper board"></div>
+                <p class="hint">Tip: Use flags to mark mines. Numbers show adjacent mines.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

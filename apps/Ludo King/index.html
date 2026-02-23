@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo King | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Board Game</p>
+                <h1>Ludo King</h1>
+                <p>Roll the dice, race your tokens home, and block your opponents. This is a simplified, local two-player Ludo experience.</p>
+
+                <div class="status-card">
+                    <div>
+                        <span>Current Turn</span>
+                        <strong data-turn>Red</strong>
+                    </div>
+                    <div>
+                        <span>Dice</span>
+                        <strong data-dice>1</strong>
+                    </div>
+                    <div>
+                        <span>Moves</span>
+                        <strong data-moves>0</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="roll">Roll Dice</button>
+                    <button class="btn ghost" data-action="reset">Reset Game</button>
+                </div>
+            </section>
+
+            <section class="board-wrap">
+                <div class="board" aria-label="Ludo board">
+                    <div class="board-grid"></div>
+                    <div class="home home-red">
+                        <div class="home-label">Red Home</div>
+                        <div class="home-pits" data-home="red"></div>
+                    </div>
+                    <div class="home home-blue">
+                        <div class="home-label">Blue Home</div>
+                        <div class="home-pits" data-home="blue"></div>
+                    </div>
+                    <div class="track" data-track></div>
+                    <div class="goal goal-red" data-goal="red"></div>
+                    <div class="goal goal-blue" data-goal="blue"></div>
+                </div>
+                <p class="hint">Tip: Roll the dice, then click a highlighted token to move.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --bg-1: #0b1220;
+  --bg-2: #121a2d;
+  --surface: rgba(17, 24, 39, 0.72);
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.14);
+  --text: #f8fafc;
+  --muted: rgba(248, 250, 252, 0.7);
+  --accent: #f97316;
+  --accent-2: #38bdf8;
+  --good: #22c55e;
+  --bad: #f43f5e;
+  --shadow: 0 26px 60px rgba(5, 10, 25, 0.55);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(900px 600px at 10% -20%, rgba(249, 115, 22, 0.2), transparent 60%),
+    radial-gradient(900px 600px at 110% 0%, rgba(56, 189, 248, 0.2), transparent 60%),
+    linear-gradient(140deg, var(--bg-1), var(--bg-2));
+  display: flex;
+  justify-content: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.page {
+  width: min(1200px, 92vw);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 0 12px;
+}
+
+.brand {
+  font-family: "Space Mono", monospace;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--text);
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: border 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  border-color: var(--border);
+  transform: translateY(-1px);
+  color: var(--accent-2);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 28px;
+  align-items: start;
+  margin: 36px 0 20px;
+}
+
+.intro {
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.intro h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+}
+
+.intro p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.info div {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.info span {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.info strong {
+  font-size: 1.1rem;
+  margin-top: 6px;
+  display: block;
+}
+
+.controls {
+  display: grid;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(120deg, var(--accent), #fb923c);
+  color: #1f1107;
+  box-shadow: 0 14px 30px rgba(249, 115, 22, 0.35);
+}
+
+.btn.ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn.danger {
+  background: linear-gradient(120deg, #fb7185, #f43f5e);
+  color: #23070c;
+  box-shadow: 0 14px 30px rgba(244, 63, 94, 0.35);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(5, 10, 25, 0.4);
+}
+
+.board-wrap {
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  border-radius: 16px;
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.8vw, 1.4rem);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.15s ease, border 0.2s ease, background 0.2s ease;
+}
+
+.cell.fixed {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent-2);
+  cursor: default;
+}
+
+.cell.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.3);
+}
+
+.cell.same {
+  background: rgba(249, 115, 22, 0.15);
+}
+
+.cell.error {
+  background: rgba(244, 63, 94, 0.2);
+  color: #fecaca;
+}
+
+.cell.box-divider-right {
+  border-right: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.cell.box-divider-bottom {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.key {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 12px 0;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, border 0.15s ease;
+}
+
+.key:hover,
+.key:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--accent-2);
+}
+
+.key.erase {
+  grid-column: span 5;
+  background: rgba(244, 63, 94, 0.15);
+  color: #fecaca;
+}
+
+.hint {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px 0 40px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 950px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .keypad {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .key.erase {
+    grid-column: span 3;
+  }
+}

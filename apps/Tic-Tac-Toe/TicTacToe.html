@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./game.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="game-layout">
+            <section class="intro">
+                <p class="eyebrow">Mini Game</p>
+                <h1>Tic-Tac-Toe</h1>
+                <p>Challenge a friend on the same screen. First player to align three marks wins. No pressure.</p>
+                <div class="legend">
+                    <span class="chip chip-x">Player X</span>
+                    <span class="chip chip-o">Player O</span>
+                </div>
+            </section>
+
+            <section class="board-card">
+                <div class="status" role="status" aria-live="polite">Player X's turn</div>
+                <div class="board" role="grid" aria-label="Tic-Tac-Toe board">
+                    <button class="cell" data-index="0" aria-label="Cell 1"></button>
+                    <button class="cell" data-index="1" aria-label="Cell 2"></button>
+                    <button class="cell" data-index="2" aria-label="Cell 3"></button>
+                    <button class="cell" data-index="3" aria-label="Cell 4"></button>
+                    <button class="cell" data-index="4" aria-label="Cell 5"></button>
+                    <button class="cell" data-index="5" aria-label="Cell 6"></button>
+                    <button class="cell" data-index="6" aria-label="Cell 7"></button>
+                    <button class="cell" data-index="7" aria-label="Cell 8"></button>
+                    <button class="cell" data-index="8" aria-label="Cell 9"></button>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="new-round">New Round</button>
+                    <button class="btn ghost" data-action="reset-score">Reset Score</button>
+                </div>
+
+                <div class="scoreboard">
+                    <div class="score">
+                        <span>X Wins</span>
+                        <strong data-score="x">0</strong>
+                    </div>
+                    <div class="score">
+                        <span>Draws</span>
+                        <strong data-score="draw">0</strong>
+                    </div>
+                    <div class="score">
+                        <span>O Wins</span>
+                        <strong data-score="o">0</strong>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

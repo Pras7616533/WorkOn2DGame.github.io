@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Puzzle</p>
+                <h1>Word Search</h1>
+                <p>Find all the hidden words in the grid. Drag across letters or click to select.</p>
+
+                <div class="status-card">
+                    <div>
+                        <span>Found</span>
+                        <strong data-found>0</strong>
+                    </div>
+                    <div>
+                        <span>Total</span>
+                        <strong data-total>0</strong>
+                    </div>
+                    <div>
+                        <span>Time</span>
+                        <strong data-time>00:00</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="new">New Puzzle</button>
+                    <button class="btn ghost" data-action="hint">Reveal Hint</button>
+                </div>
+            </section>
+
+            <section class="board-wrap">
+                <div class="grid" data-grid></div>
+                <div class="word-list" data-word-list></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

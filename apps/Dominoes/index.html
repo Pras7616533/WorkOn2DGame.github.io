@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominoes | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Classic Tile Game</p>
+                <h1>Dominoes</h1>
+                <p>Play a simple two‑player dominoes round. Match the numbers on either end of the chain to place tiles.</p>
+
+                <div class="status-card">
+                    <div>
+                        <span>Current Turn</span>
+                        <strong data-turn>Red</strong>
+                    </div>
+                    <div>
+                        <span>Boneyard</span>
+                        <strong data-boneyard>0</strong>
+                    </div>
+                    <div>
+                        <span>Red Left</span>
+                        <strong data-red-left>7</strong>
+                    </div>
+                    <div>
+                        <span>Blue Left</span>
+                        <strong data-blue-left>7</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="draw">Draw Tile</button>
+                    <button class="btn ghost" data-action="pass">Pass Turn</button>
+                    <button class="btn ghost" data-action="reset">Reset Game</button>
+                </div>
+            </section>
+
+            <section class="board-wrap">
+                <div class="message" data-message>Start by placing the opening tile.</div>
+                <div class="chain" data-chain></div>
+                <div class="choice-panel hidden" data-choice>
+                    <span>Place tile on:</span>
+                    <button class="btn ghost" data-choice="left">Left</button>
+                    <button class="btn ghost" data-choice="right">Right</button>
+                </div>
+
+                <div class="hands">
+                    <div class="player-panel">
+                        <h3>Red Player</h3>
+                        <div class="hand" data-hand="red"></div>
+                    </div>
+                    <div class="player-panel">
+                        <h3>Blue Player</h3>
+                        <div class="hand" data-hand="blue"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

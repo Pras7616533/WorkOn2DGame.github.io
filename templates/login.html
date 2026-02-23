@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+    <div class="page">
+        <header class="page-header">
+            <a class="brand" href="../index.html">2D Games</a>
+            <nav class="page-nav">
+                <a href="../index.html">Landing</a>
+                <a href="./home.html">Home</a>
+                <a href="./register.html">Register</a>
+            </nav>
+        </header>
+
+        <main class="login-card">
+            <div class="login-intro">
+                <p class="eyebrow">Player Portal</p>
+                <h1>Welcome Back</h1>
+                <p>Log in to continue your adventure and track your favorite 2D classics.</p>
+            </div>
+
+            <form class="login-form" action="#" method="post">
+                <label for="login-identity">Email or Username</label>
+                <input id="login-identity" name="identity" type="text" placeholder="you@example.com" required>
+
+                <label for="login-password">Password</label>
+                <input id="login-password" name="password" type="password" placeholder="Your secret combo" required>
+
+                <div class="form-meta">
+                    <label class="remember">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a class="forgot" href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit">Start Playing</button>
+                <p class="alt">New here? <a href="./register.html">Create an account</a></p>
+            </form>
+        </main>
+
+        <footer class="page-footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="../scripts/auth.js" defer></script>
+</body>
+</html>

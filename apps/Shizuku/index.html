@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shizuku | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Ambient Mini Game</p>
+                <h1>Shizuku</h1>
+                <p>Create droplets, watch ripples, and enjoy a calm, responsive water surface. Click to place a drop or let the rain fall on its own.</p>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="toggle-rain">Start Rain</button>
+                    <div class="slider">
+                        <label for="intensity">Intensity</label>
+                        <input id="intensity" type="range" min="1" max="10" value="4">
+                    </div>
+                    <div class="stat">
+                        <span>Total Drops</span>
+                        <strong data-count>0</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stage-wrap">
+                <div class="shizuku-stage" aria-label="Water surface"></div>
+                <p class="hint">Tip: click anywhere on the surface to place a drop.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

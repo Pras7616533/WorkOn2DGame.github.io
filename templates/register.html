@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../styles/register.css">
+</head>
+<body>
+    <div class="page">
+        <header class="page-header">
+            <a class="brand" href="../index.html">2D Games</a>
+            <nav class="page-nav">
+                <a href="../index.html">Landing</a>
+                <a href="./home.html">Home</a>
+                <a href="./login.html">Login</a>
+            </nav>
+        </header>
+
+        <main class="register-card">
+            <div class="register-intro">
+                <p class="eyebrow">Join The Crew</p>
+                <h1>Create Your Account</h1>
+                <p>Sign up to save your progress, unlock new levels, and join the 2D arcade community.</p>
+            </div>
+
+            <form class="register-form" action="#" method="post">
+                <div class="field-row">
+                    <div class="field">
+                        <label for="first-name">First Name</label>
+                        <input id="first-name" name="first_name" type="text" placeholder="Alex" required>
+                    </div>
+                    <div class="field">
+                        <label for="last-name">Last Name</label>
+                        <input id="last-name" name="last_name" type="text" placeholder="Rivera" required>
+                    </div>
+                </div>
+
+                <label for="register-email">Email Address</label>
+                <input id="register-email" name="email" type="email" placeholder="you@example.com" required>
+
+                <label for="register-username">Username</label>
+                <input id="register-username" name="username" type="text" placeholder="pixel-hero" required>
+
+                <label for="register-password">Password</label>
+                <input id="register-password" name="password" type="password" placeholder="Create a strong password" required>
+
+                <label for="register-confirm">Confirm Password</label>
+                <input id="register-confirm" name="confirm_password" type="password" placeholder="Repeat your password" required>
+
+                <label class="agree">
+                    <input type="checkbox" name="terms" required>
+                    <span>I agree to the Terms and Privacy Policy.</span>
+                </label>
+
+                <button type="submit">Create Account</button>
+                <p class="alt">Already have an account? <a href="./login.html">Log in</a></p>
+            </form>
+        </main>
+
+        <footer class="page-footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="../scripts/auth.js" defer></script>
+</body>
+</html>

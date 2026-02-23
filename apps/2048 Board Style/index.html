@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Board Style | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Puzzle Board</p>
+                <h1>2048 Board Style</h1>
+                <p>Combine matching tiles to reach 2048. Use your arrow keys (or swipe) to move tiles.</p>
+
+                <div class="status-card">
+                    <div>
+                        <span>Score</span>
+                        <strong data-score>0</strong>
+                    </div>
+                    <div>
+                        <span>Best</span>
+                        <strong data-best>0</strong>
+                    </div>
+                    <div>
+                        <span>Moves</span>
+                        <strong data-moves>0</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="new">New Game</button>
+                    <button class="btn ghost" data-action="reset">Reset Best</button>
+                </div>
+
+                <p class="hint">Tip: Keep your highest tiles in a corner.</p>
+            </section>
+
+            <section class="board-wrap">
+                <div class="board" data-board></div>
+                <div class="overlay hidden" data-overlay>
+                    <div class="overlay-card">
+                        <h2 data-overlay-title>Game Over</h2>
+                        <p data-overlay-text>Try again and beat your best score.</p>
+                        <button class="btn primary" data-action="restart">Play Again</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
