@@ -13,7 +13,7 @@ If your browser blocks local file routing, serve the folder with any static serv
 python -m http.server 8080
 ```
 
-Then visit `http://localhost:8080`.
+Then visit `https://pras7616533.github.io/WorkOn2DGame.github.io/`.
 
 ## Project layout
 
