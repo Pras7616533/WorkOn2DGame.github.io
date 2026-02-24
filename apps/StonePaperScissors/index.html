@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Scissors | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Classic Duel</p>
+                <h1>Stone Paper Scissors</h1>
+                <p>Choose your move and face off against the CPU. First to reach 5 wins takes the match.</p>
+
+                <div class="status-card">
+                    <div>
+                        <span>Player</span>
+                        <strong data-score="player">0</strong>
+                    </div>
+                    <div>
+                        <span>CPU</span>
+                        <strong data-score="cpu">0</strong>
+                    </div>
+                    <div>
+                        <span>Rounds</span>
+                        <strong data-rounds>0</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn ghost" data-action="reset">Reset Match</button>
+                </div>
+            </section>
+
+            <section class="arena">
+                <div class="choices">
+                    <button class="choice" data-move="stone">
+                        <span class="icon">🪨</span>
+                        <span>Stone</span>
+                    </button>
+                    <button class="choice" data-move="paper">
+                        <span class="icon">📄</span>
+                        <span>Paper</span>
+                    </button>
+                    <button class="choice" data-move="scissors">
+                        <span class="icon">✂️</span>
+                        <span>Scissors</span>
+                    </button>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-row">
+                        <span>Player</span>
+                        <strong data-player-pick>—</strong>
+                    </div>
+                    <div class="result-row">
+                        <span>CPU</span>
+                        <strong data-cpu-pick>—</strong>
+                    </div>
+                    <div class="result-message" data-message>Pick a move to start.</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

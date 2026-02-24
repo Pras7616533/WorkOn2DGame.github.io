@@ -1,0 +1,1 @@
+In <name> folder html, css and js write <name> and link the <name> this with templates/game.html 
