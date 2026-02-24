@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Arcade Classic</p>
+                <h1>Pong</h1>
+                <p>Use W/S and ↑/↓ to move the paddles. First to 7 wins.</p>
+
+                <div class="status-card">
+                    <div>
+                        <span>Left</span>
+                        <strong data-score="left">0</strong>
+                    </div>
+                    <div>
+                        <span>Right</span>
+                        <strong data-score="right">0</strong>
+                    </div>
+                    <div>
+                        <span>Status</span>
+                        <strong data-status>Ready</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="start">Start</button>
+                    <button class="btn ghost" data-action="reset">Reset</button>
+                </div>
+            </section>
+
+            <section class="arena">
+                <div class="court" data-court>
+                    <div class="paddle left" data-paddle="left"></div>
+                    <div class="paddle right" data-paddle="right"></div>
+                    <div class="ball" data-ball></div>
+                    <div class="center-line"></div>
+                </div>
+                <p class="hint">Tip: Hold Shift for a speed boost.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

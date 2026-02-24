@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Car Racing | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Arcade Racer</p>
+                <h1>2D Car Racing</h1>
+                <p>Shift lanes, dodge traffic, and rack up distance. Survive as long as you can.</p>
+
+                <div class="status-card">
+                    <div>
+                        <span>Distance</span>
+                        <strong data-distance>0 m</strong>
+                    </div>
+                    <div>
+                        <span>Speed</span>
+                        <strong data-speed>1x</strong>
+                    </div>
+                    <div>
+                        <span>Best</span>
+                        <strong data-best>0 m</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="start">Start Race</button>
+                    <button class="btn ghost" data-action="reset">Reset</button>
+                </div>
+            </section>
+
+            <section class="track-wrap">
+                <div class="track" data-track>
+                    <div class="car" data-car></div>
+                </div>
+                <p class="hint">Tip: Use arrow keys or click to change lanes.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

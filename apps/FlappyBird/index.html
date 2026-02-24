@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird | 2D Games</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="brand" href="../../index.html">2D Games</a>
+            <nav class="nav-links">
+                <a href="../../index.html">Landing</a>
+                <a href="../../templates/home.html">Home</a>
+                <a href="../../templates/game.html">Games</a>
+            </nav>
+        </header>
+
+        <main class="layout">
+            <section class="intro">
+                <p class="eyebrow">Arcade</p>
+                <h1>Flappy Bird</h1>
+                <p>Tap to fly and guide the bird through the pipes. How long can you last?</p>
+
+                <div class="status-card">
+                    <div>
+                        <span>Score</span>
+                        <strong data-score>0</strong>
+                    </div>
+                    <div>
+                        <span>Best</span>
+                        <strong data-best>0</strong>
+                    </div>
+                    <div>
+                        <span>Status</span>
+                        <strong data-status>Ready</strong>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn primary" data-action="start">Start</button>
+                    <button class="btn ghost" data-action="reset">Reset</button>
+                </div>
+            </section>
+
+            <section class="game-wrap">
+                <div class="sky" data-sky>
+                    <div class="bird" data-bird></div>
+                </div>
+                <p class="hint">Tip: Click, tap, or press Space to flap.</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 2D Games. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
